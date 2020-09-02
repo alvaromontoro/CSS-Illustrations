@@ -1,0 +1,259 @@
+.cartoon {
+  --skin: #d50000;
+  --skindark: #b00;
+  --balloon: orange;
+  --balloondark: darkorange;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vmin;
+  height: 70vmin;
+}
+
+.cartoon::after {
+  width: 270%;
+  height: 0;
+  bottom: -1px;
+  left: -75%;
+  border-bottom: 1px solid var(--skindark);
+}
+
+.cartoon div {
+  position: absolute;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/*****/
+html,
+body {
+  background: #f002;
+}
+
+.body {
+  width: 20vmin;
+  height: 20vmin;
+  background: var(--skin);
+  box-shadow: inset 0.5vmin -0.75vmin var(--skindark);
+  top: 22%;
+}
+
+.eyes {
+  width: 30%;
+  height: 30%;
+  background: black;
+  background: linear-gradient(to right, black 70%, white 0);
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 2vmin white, 6vmin -0.25vmin 0 -2vmin black,
+    6vmin -0.5vmin 0 0.5vmin white;
+}
+
+.eye {
+  width: 30%;
+  height: 30%;
+  background: white;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  box-shadow: 6vmin -0.5vmin 0 0.5vmin white;
+}
+
+.eye::before,
+.eye::after {
+  border-radius: 50%;
+  width: 27%;
+  height: 27%;
+  background: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0% 30%, 35% 35%, 30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.eye::after {
+  left: 150%;
+  top: 47%;
+}
+
+.legs {
+  width: 55%;
+  height: 55%;
+  left: 50%;
+  top: 50%;
+  clip-path: polygon(-50% -500%, 150% -500%, 150% 90%, -50% 90%);
+  transform: translate(-45%, 0) rotate(-2deg);
+}
+
+.legs::after {
+  width: 100%;
+  height: 100%;
+  box-shadow: -0.125vmin -1vmin 0 0.2vmin var(--skindark),
+    0.125vmin -1vmin 0 0.2vmin var(--skindark), 0 -1.8vmin 0 1.8vmin var(--skin);
+  border-radius: 50% 50% 60% 60%;
+}
+
+.foot {
+  width: 35.5%;
+  height: 2%;
+  background: var(--skin);
+  border-radius: 50vmin 80% 30% 20%;
+  bottom: 0;
+  left: 1%;
+  clip-path: polygon(0% 0%, 20% 0%, 96% 70%, 100% 100%, 0% 100%);
+  transform: scale(1.2);
+}
+
+.foot2 {
+  left: auto;
+  right: -12.8%;
+  clip-path: polygon(0% 0%, 20% 0%, 98% 60%, 100% 100%, 0% 100%);
+  transform: rotatey(180deg) scale(1.35);
+}
+
+.arm1 {
+  width: 60%;
+  height: 30%;
+  top: 20%;
+  left: 90%;
+  box-shadow: -0.5vmin 0.5vmin 0 0.5vmin var(--skin), -0.25vmin 0.5vmin 0 1.125vmin var(--skindark);
+  clip-path: polygon(-50% 50%, 120% 50%, 120% 120%, -50% 120%);
+}
+
+.arm2 {
+  width: 150%;
+  height: 90%;
+  top: 13%;
+  left: 0%;
+  box-shadow: -0.5vmin -0.5vmin 0 0.125vmin var(--skindark),
+    -0.5vmin -2.5vmin 0 1.125vmin var(--skin);
+  transform: rotate(19deg);
+  clip-path: polygon(-50% 30%, 50% 50%, 50% 80%, 5% 80%);
+}
+
+.mouth {
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40%;
+  height: 40%;
+  color: #400;
+  box-shadow: -0.9vmin 3.5vmin 0 -3vmin white, 0.9vmin 3.5vmin 0 -3vmin white, 0 0 0 2vmin;
+  clip-path: polygon(50% 50%, 150% 150%, -50% 150%);
+}
+
+.smile {
+  color: #400;
+  top: 66.5%;
+  left: 27.95%;
+  width: 1.9vmin;
+  height: 1.9vmin;
+  background: #400;
+  box-shadow: 6.875vmin 0;
+}
+
+.balloon {
+  width: 60%;
+  height: 20%;
+  background: var(--balloon);
+  box-shadow: inset 0.5vmin -0.5vmin var(--balloondark);
+  right: -78%;
+  top: -10%;
+}
+
+.balloon::before {
+  width: 0;
+  height: 280%;
+  left: 50%;
+  bottom: -1vmin;
+  transform: translate(-50%, 100%);
+  border-left: 1px solid #222;
+}
+
+.balloon::after {
+  width: 2vmin;
+  height: 2vmin;
+  background: var(--balloondark);
+  bottom: -1.95vmin;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(50% -50%, 100% 100%, 0% 100%);
+}
+
+.hand {
+  background: var(--skin);
+  width: 20%;
+  height: 7%;
+}
+
+.hand1 {
+  top: 29%;
+  right: -54%;
+  border-radius: 100% 100% 0 100%;
+  box-shadow: inset 0.5vmin -0.5vmin var(--skindark);
+}
+
+.hand1::after {
+  width: 0;
+  height: 0.5vmin;
+  right: 28%;
+  bottom: 0vmin;
+  border-left: 1px solid #222;
+  transform: translate(-50%, 0);
+}
+
+.hand2 {
+  border-radius: 0 100% 100% 100%;
+  box-shadow: inset 0 -0.5vmin var(--skindark);
+  top: 77%;
+  left: -16%;
+}
+
+.hair1 {
+  top: 18%;
+  left: 60%;
+  width: 32%;
+  height: 9%;
+  box-shadow: 0.5vmin -0.75vmin 0 1.25vmin var(--skin), 0 -0.5vmin 0 1.5vmin var(--skindark);
+  clip-path: polygon(-50% -50%, 50% -50%, 50% 50%, -50% 50%);
+}
+.hair-tip1 {
+  width: 2vmin;
+  height: 2vmin;
+  background: var(--skin);
+  top: calc(18% - 2vmin);
+  left: calc(76% - 1vmin);
+}
+
+.hair2 {
+  width: 40%;
+  height: 15%;
+  box-shadow: 0.75vmin 0 var(--skindark), 0.25vmin -1vmin 0 1.5vmin var(--skin);
+  clip-path: polygon(50% -50%, 150% -50%, 150% 50%, 50% 50%);
+  transform: rotate(-10deg);
+  top: 16%;
+  left: 2%;
+}
+
+.hair-tip2 {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  background: var(--skin);
+  top: 12.5%;
+  left: 10%;
+}
