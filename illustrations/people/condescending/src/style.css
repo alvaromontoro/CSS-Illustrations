@@ -1,0 +1,244 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+#person {
+  width: 50vmin;
+  height: 80vmin;
+}
+
+.head {
+  width: 60%;
+  height: 60%;
+  background: #222;
+  background: linear-gradient(#222, #fca);
+  top: 20%;
+  left: 20%;
+  border-radius: 50vmin 50vmin 90vmin 90vmin;
+  box-shadow: inset 1.75vmin 0 0 -1vmin #fb8, inset -1.75vmin 0 0 -1vmin #fff4, inset 0 -45vmin #fca,
+    10vmin -9vmin 0 -9vmin #222, -10vmin -9vmin 0 -9vmin #222;
+}
+
+.nose {
+  width: 20%;
+  height: 34%;
+  background: linear-gradient(#fca, #f96);
+  background: #f96;
+  background: linear-gradient(#fb8, #f96);
+  background: linear-gradient(135deg, #fca, #f96);
+  background: #fca;
+  box-shadow: inset -0.5vmin -0.5vmin #fff4, inset 1vmin -1.5vmin 0 -1vmin #fb8;
+  top: 34%;
+  left: 40%;
+  border-radius: 150% 100% 9vmin 9vmin;
+}
+
+.eyebrows {
+  height: 10%;
+  width: 86%;
+  top: 25%;
+  left: 7%;
+  background: #222;
+  border-radius: 100vmin 100vmin 0 0;
+  box-shadow: 0 1vmin #fca, -0.25vmin 0 #fca, -0.7vmin 0.15vmin #222, -0.95vmin 0 #fca,
+    -1.2vmin 0.25vmin #222, 0.25vmin 0 #fca, 0.7vmin 0.15vmin #222, 0.95vmin 0 #fca,
+    1.2vmin 0.25vmin #222;
+  clip-path: polygon(-50% 0%, 150% 0%, 150% 100%, -50% 100%);
+}
+
+.mustache {
+  width: 60%;
+  left: 20%;
+  top: 65%;
+  height: 12%;
+  background: #222;
+  border-radius: 100vmin 100vmin 0 0;
+  box-shadow: -0.25vmin 0 #fca, -0.7vmin 0.25vmin #222, 0.25vmin 0 #fca, 0.7vmin 0.25vmin #222;
+  clip-path: polygon(
+    -50% 0%,
+    150% 0%,
+    150% 100%,
+    94% 100%,
+    92% 90%,
+    90% 100%,
+    89% 95%,
+    88% 100%,
+    -50% 100%
+  );
+  transform: rotate(-3deg);
+}
+
+.lip {
+  width: 40%;
+  left: 30%;
+  height: 10%;
+  top: 72%;
+  background: #fb8;
+}
+
+.eyes,
+.eyelids {
+  top: 29%;
+  left: 11%;
+  width: 12%;
+  height: 0;
+  padding-top: 12%;
+  background: #222;
+  border: 2vmin solid white;
+  border-bottom: 1.75vmin solid white;
+  clip-path: polygon(-50% 55%, 400% 49%, 400% 100%, -50% 100%);
+  box-shadow: 16vmin 0.25vmin 0 -2.25vmin #222, 16vmin 0 0 -0.5vmin white;
+}
+
+.eyelids {
+  background: #fb8;
+  border-color: #fb8;
+  clip-path: none;
+  box-shadow: 16vmin 0 0 -0.5vmin #fb8;
+}
+
+.chin {
+  width: 40%;
+  height: 7%;
+  background: #fca;
+  top: 95%;
+  left: 50%;
+  border-radius: 0 0 10vmin 10vmin;
+  transform: translate(-50%, 0);
+  aclip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
+  box-shadow: 0 0.5vmin #fb8;
+}
+
+.ear {
+  height: 25%;
+  width: 20%;
+  background: red;
+  top: 40%;
+  left: 8%;
+  border-radius: 100% 100% 0 20vmin;
+  transform: rotate(-15deg);
+  background: #fca;
+  abackground-image: radial-gradient(#f966, #fca 50%);
+  box-shadow: inset 0.5vmin 0.25vmin #fb8;
+}
+
+.ear2 {
+  left: auto;
+  right: 8%;
+  transform: rotate(15deg);
+  border-radius: 100% 100% 20vmin 0;
+  box-shadow: inset -0.5vmin 0 #fff4;
+}
+
+.hair {
+  width: 78%;
+  height: 50%;
+  background: #222;
+  left: 11%;
+  top: 8%;
+  box-shadow: inset -0.75vmin 0 #fff2, inset 0.75vmin 0 #111;
+}
+
+.nose-side {
+  /*   background: red;
+  width: 40%;
+  height: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 5vmin;
+  top: 57%;
+  background: #fca;
+  box-shadow: inset 0.5vmin -0.5vmin 0 -0.5vmin #fb8, inset -0.5vmin -0.5vmin #fff4; */
+  width: 4vmin;
+  height: 4vmin;
+  background: #fca;
+  left: 53%;
+  top: 58%;
+  box-shadow: inset -0.25vmin -0.25vmin #fff4;
+}
+
+.nose-side2 {
+  left: 30%;
+  box-shadow: inset 0.25vmin -0.25vmin #fb8;
+  transform: rotate(-30deg);
+}
+
+.neck {
+  width: 46%;
+  height: 50%;
+  background: #fca;
+  left: 27%;
+  top: 35%;
+  border-radius: 0 0 0.5vmin 0.5vmin;
+  box-shadow: inset -0.3vmin 0 #fff4, inset 0.5vmin 0 #fb8;
+}
+
+.neck::after {
+  width: 100%;
+  height: 10%;
+  background: #fca;
+  bottom: 0;
+  border-radius: 50%;
+  transform: translate(0, 40%);
+  abox-shadow: 0 0 0 0.4vmin rgba(0, 0, 0, 0.2), 0 0 0 2vmin rgba(0, 0, 0, 0.2);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.vneck {
+  width: 56%;
+  height: 15%;
+  background: #306754;
+  background-image: linear-gradient(to right, #306754 95%, rgba(0, 0, 0, 0.125));
+  background-size: 8% 100%;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 2vmin 2vmin 3vmin 3vmin;
+}
+
+.vneck::after {
+  width: 85%;
+  height: 25%;
+  background: #306754;
+  background: linear-gradient(transparent 40%, #306754 50%);
+  bottom: 0;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 37%);
+  z-index: -1;
+}
+
+.hairdo {
+  color: #222;
+  width: 30%;
+  height: 20%;
+  background: #222;
+  top: 10%;
+  left: 5%;
+  box-shadow: 8vmin -5vmin, 17vmin -6vmin 0 2vmin, 17.25vmin -6.5vmin 0 2vmin #444,
+    29vmin -4vmin 0 -2vmin, 29.5vmin -4.25vmin 0 -2vmin #444, 0.75vmin -7.5vmin 0 -6vmin,
+    -0.5vmin -0.5vmin #111;
+}
