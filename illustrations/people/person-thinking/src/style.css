@@ -1,0 +1,196 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.25vmin solid #963;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html,
+body {
+  background: #eec;
+  color: #963;
+}
+
+#person {
+  height: 35vmin;
+  width: 20vmin;
+}
+
+.head {
+  top: 0.25vmin;
+  left: 50%;
+  color: #963;
+  width: 8vmin;
+  height: 12vmin;
+  transform: rotate(7deg) translate(-50%, 0);
+  background: #963;
+  box-shadow: inset 0 0.75vmin, inset -0.5vmin -10vmin #eec, 0 0 0 0.25vmin;
+}
+
+.ear {
+  width: 2vmin;
+  height: 2.25vmin;
+  top: 50%;
+  background: #eec;
+}
+.ear::before {
+  width: 40%;
+  border-top: 0.25vmin solid #963;
+  top: 40%;
+  left: 33%;
+}
+.ear-1 {
+  left: -1.5vmin;
+  border-right-color: transparent;
+  transform: rotate(-10deg);
+}
+.ear-2 {
+  border-left-color: transparent;
+  top: 40%;
+  right: -1.5vmin;
+}
+.ear-2::before {
+  left: auto;
+  right: 30%;
+  transform: rotate(-5deg);
+}
+
+.nose {
+  width: 0.75vmin;
+  height: 3vmin;
+  border: 0.25vmin solid transparent;
+  border-left: 0.25vmin solid #963;
+  border-bottom: 0.25vmin solid #963;
+  border-right: 0;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-5deg) translate(-60%, -25%);
+  border-radius: 100% 0 0 50%;
+}
+
+.mouth {
+  width: 3vmin;
+  height: 3vmin;
+  transform: rotate(45deg);
+  border: 0.25vmin solid transparent;
+  border-right-color: #963;
+  top: 55%;
+  left: 35%;
+}
+
+.cheeks {
+  width: 5vmin;
+  height: 1.25vmin;
+  background: rgba(255, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: rotate(-7deg) translate(-50%, -10%);
+}
+
+@keyframes blink {
+  0%,
+  40%,
+  50%,
+  100% {
+    height: 0.75vmin;
+  }
+  45% {
+    height: 0;
+  }
+}
+
+.eyes {
+  width: 0.75vmin;
+  height: 0.75vmin;
+  background: #963;
+  top: 47%;
+  left: 25%;
+  box-shadow: 2.75vmin 0 #963;
+  transform: rotate(-7deg) translate(0%, -50%);
+  aanimation: blink 4s infinite;
+}
+
+.eyebrows {
+  width: 1.75vmin;
+  border: 0.75vmin solid #963;
+  border-bottom: 0;
+  transform: rotate(-7deg);
+  top: 33%;
+  left: 15%;
+  box-shadow: 3vmin 0 #963;
+}
+
+.neck {
+  color: #963;
+  top: 9vmin;
+  left: 50%;
+  width: 5vmin;
+  height: 7vmin;
+  transform: translate(-50%, 0);
+  border-radius: 80vmin 70vmin 0 0;
+  box-shadow: 0 0 0 0.25vmin, inset 0 -2.5vmin;
+}
+
+.body {
+  width: 20vmin;
+  height: 20vmin;
+  background: #963;
+  top: 15vmin;
+  left: 50%;
+  transform: translate(-48.5%, 0);
+}
+
+.chest {
+  background: #963;
+  width: 12vmin;
+  height: 15vmin;
+  box-shadow: -0.25vmin 0.25vmin #eec, 0.25vmin 2vmin #eec;
+  top: 20vmin;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.idea {
+  color: #963;
+  font-family: Times, "Times new roman", serif;
+  font-size: 4.5vmin;
+  width: 6vmin;
+  height: 6vmin;
+  background: #eec;
+  text-align: center;
+  line-height: 6vmin;
+  top: -5vmin;
+  left: -1vmin;
+  box-shadow: 2.25vmin 3.8vmin 0 -2.25vmin #eec, 2.25vmin 3.8vmin 0 -2vmin,
+    3.6vmin 4.9vmin 0 -2.75vmin #eec, 3.6vmin 4.9vmin 0 -2.5vmin, 0 0 0 0.25vmin;
+  user-select: none;
+}
+
+.table {
+  width: 160%;
+  bottom: 0;
+  left: -35%;
+  border-bottom: 0.25vmin solid #963;
+}
