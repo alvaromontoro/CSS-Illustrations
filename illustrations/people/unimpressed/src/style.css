@@ -1,0 +1,147 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html, body {
+  --skin: #fca;
+  --shadow: #fb9;
+  --hair: #ddd;
+  overflow: hidden;
+  background: var(--skin);
+}
+
+.mouth {
+  border-radius: 50vmin 50vmin 0 0;
+  width:70%;
+  height: 40%;
+  border-bottom: 0 solid transparent;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.mouth::before,
+.mouth::after {
+  width: 10%;
+  height: 10%;
+  border-radius: 0 0 10vmin 10vmin;
+  border: 0.5vmin solid;
+  border-top: 0 solid transparent;
+  bottom: -1%;
+  left: -5%;
+  left: calc(-5% - 0.25vmin)
+}
+
+.mouth::after {
+  left: 95%;
+  left: calc(95% + 0.25vmin);
+}
+
+.nose {
+  width: 25%;
+  height: 40%;
+  border-radius: 100% / 120% 120% 70% 70%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--shadow);
+  background-image: linear-gradient(transparent, rgba(255,0,0,0.1));
+}
+
+.nose::after {
+  width: 80%;
+  height: 40%;
+  left: 10%;
+  bottom: -50%;
+  border-radius: 50%;
+  border: 0.5vmin solid transparent;
+  border-top-color: black;
+}
+
+.eye {
+  width: 36%;
+  height: 36%;
+  background: white;
+  top: 15%;
+  left: 14%;
+  left: calc(14% + 0.25vmin);
+  overflow: hidden;
+}
+
+.eye + .eye {
+  left: 50%;
+  left: calc(50% - 0.25vmin);
+}
+
+.eye::before {
+  width: 10%;
+  height: 10%;
+  background: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eye::after {
+  width: 400%;
+  height: 400%;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  left: 60%;
+  top: 15%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 0 1in var(--shadow);
+}
+
+.eye + .eye::after {
+  left: 40%;
+  left: calc(40% - 0.25vmin);
+}
+
+.eyebrow {
+  width: 45%;
+  height: 35%;
+  left: 9%;
+  top: 10%;
+  border: 0.5vmin solid transparent;
+  border-top: 0.5vmin solid;
+  box-shadow: 0 -10vmin 0 -5vmin var(--hair), 0 -10vmin 0 -4.6vmin;
+  transform: rotate(-10deg);
+}
+
+.eyebrow + .eyebrow {
+  height: 65%;
+  width: 50%;
+  left: 45%;
+  top: 0;
+  box-shadow: 0 -10vmin 0 -5.5vmin var(--hair), 0 -10vmin 0 -5.125vmin;
+  transform: rotate(2deg);
+}
