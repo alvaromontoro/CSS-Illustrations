@@ -2,7 +2,7 @@
 
 Face with an unimpressed expression.
 
-![Illustration of a man's face with a big frowny mouth, eyes, and nose](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/people/unimpressed/unimpressed.jpeg?raw=true)
+![Illustration of a man's face with a big frowny mouth, eyes, and nose](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/people/unimpressed/unimpressed.png?raw=true)
 
 ---
 
