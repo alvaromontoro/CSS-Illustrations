@@ -1,0 +1,571 @@
+html, body {
+  background: #ffe;
+  color: #fa0;
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+* {
+  clip-path: none !important;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.mouth {
+  width: 9.5%;
+  height: 6%;
+  top: 24.25%;
+  left:62%;
+  transform: rotate(-45deg);
+  border: 0.5vmin solid transparent;
+  border-right: 0.75vmin solid;
+  border-bottom: 1vmin solid;
+  border-left: 0.25vmin solid transparent;
+}
+
+.mouth::after {
+  width: 180%;
+  height: 155%;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  border: 0.33vmin solid transparent;
+  border-right: 0.75vmin solid;
+  top: -100%;
+  left: -23%;
+}
+
+.mouth::before {
+  width: 100%;
+  height: 130%;
+  transform: rotate(94deg);
+  border-radius: 50%;
+  border: 0.5vmin solid transparent;
+  border-top: 0.75vmin solid;
+  left: 68%;
+  top: -92%;
+}
+
+.eye {
+  width: 2%;
+  height: 3%;
+  box-shadow: inset 0 0 0 4vmin;
+  border-radius: 100% / 120% 120% 60% 70%;
+  transform: rotate(-20deg);
+  top: 18.75%;
+  left: 57.5%;
+}
+
+.top {
+  width: 26%;
+  height: 20%;
+  border-radius: 50% 45% 50% 50%;
+  top: 16.5%;
+  left: 41.5%;
+  transform: rotate(-34deg);
+  box-shadow: -1vmin -5vmin 0 -4vmin, 2vmin -4.5vmin 0 -4vmin, 0 -5vmin 0 -4vmin;
+}
+
+.top::after {
+  width: 80%;
+  height: 70%;
+  border-radius: 50%;
+  top: -9%;
+  left: -13%;
+  transform: rotate(7deg);
+  box-shadow: -0.25vmin -3.25vmin 0 -2.5vmin;
+  clip-path: polygon(0% -10%, 100% -10%, 100% 3%, 0% 20%);
+}
+
+.top::before {
+  width: 60%;
+  height: 50%;
+  border-radius: 50%;
+  top: -18%;
+  left: 9%;
+  transform: rotate(35deg);
+  abox-shadow: 0.25vmin -3.25vmin 0 -2.5vmin #f007;
+  border: 0.25vmin solid transparent;
+  border-top: 1vmin solid;
+  border-right: 5.5vmin solid transparent;
+}
+
+.fin {
+  width: 19%;
+  height: 13%;
+  border-radius: 20% 90% 0 0;
+  transform: rotate(-30deg);
+  top: 8%;
+  left: 31%;
+  box-shadow: inset -1.25vmin 0.5vmin
+}
+
+.fin::after {
+  width: 30%;
+  height: 40%;
+  box-shadow: 0.75vmin 0.125vmin;
+  border-radius: 50%;
+  left: -15%;
+  transform: rotate(-10deg);
+  top: 5%;
+  left: -10%;
+}
+
+.fin::before {
+  width: 40%;
+  height: 140%;
+  right: 0.5%;
+  top: -40%;
+  border-radius: 0 100% 0 0;
+  transform-origin: bottom right;
+  transform: rotate(-4deg);
+  box-shadow: 1vmin 0.25vmin;
+}
+
+.gill {
+  width: 10%;
+  height: 10%;
+  border-radius: 100% / 100% 100% 50% 90%;
+  transform: rotate(15deg);
+  top: 18.75%;
+  left: 49.9%;
+  box-shadow: -1.25vmin 1.5vmin 0 -1vmin, -1.4vmin 0.6vmin 0 -0.7vmin;
+}
+
+.gill::after {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  left: -2vmin;
+  top: 53%;
+  border-top: 0.6vmin solid;
+  border-bottom: 0.25vmin solid transparent;
+  border-right-color: transparent;
+  transform: rotate(-14deg);
+}
+
+.gill::before {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border: 0.5vmin solid;
+  border-radius: 47%;
+  left: -2.2vmin;
+  top: 28%;
+  border-top: 0.25vmin solid transparent;
+  border-bottom: 0.75vmin solid;
+  border-right-color: transparent;
+  transform: rotate(5deg);
+}
+
+.side-1 {
+  width: 25%;
+  height: 27%;
+  border-radius: 29vmin 0vmin 30vmin 110%;
+  border: 0.5vmin solid transparent;
+  border-left: 1vmin solid;
+  border-top: 0.75vmin solid;
+  transform: rotate(6deg);
+  top: 32%;
+  left: 14%;
+}
+
+.side-1::after {
+  width: 100%;
+  height: 50%;
+  border-radius: 18% / 51%;
+  bottom: 10%;
+  transform-origin: bottom left;
+  transform: rotate(8deg);
+  left: 2%;
+  box-shadow: inset 0.75vmin 0 0 -0.25vmin;
+  clip-path: polygon(0% 0%, 8% 0%, 15% 100%, 0% 100%)
+}
+
+.side-1::before {
+  width: 100%;
+  height: 60%;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  top: 14%;
+  left: 35%;
+  box-shadow: inset 1.25vmin 0.8vmin 0 -0.25vmin
+}
+
+.side-2 {
+  width: 25%;
+  height: 25%;
+  border-radius: 130% 0vmin 30vmin 110%;
+  transform: rotate(1deg);
+  top: 35.75%;
+  left: 18%;
+  box-shadow: inset 1.25vmin 0 0 -0.25vmin;
+}
+
+.side-2::after {
+  width: 125%;
+  height: 80%;
+  border-radius: 28% / 51%;
+  bottom: -2%;
+  transform-origin: bottom left;
+  transform: rotate(-3deg);
+  left: 10%;
+  box-shadow: inset 1vmin 0 0 -0.25vmin;
+  clip-path: polygon(0% 0%, 8% 0%, 100% 100%, 0% 100%)
+}
+
+.side-3 {
+  border: 0.75vmin solid transparent;
+  width: 16%;
+  height: 4.5%;
+  border-radius: 100% 100% 100% 100%;
+  border-bottom: 0.5vmin solid;
+  border-right: 1.5vmin solid;
+  border-left: 0.25vmin solid transparent;
+  border-top: 0.5vmin solid transparent;
+  transform: rotate(-6deg);
+  top: 31%;
+  left: 35%;
+  clip-path: polygon(0% 100%, 0% 80%, 70% 0%, 100% 0%, 100% 100%);
+}
+
+.side-3::before {
+  width: 80%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.85vmin solid;
+  transform: rotate(3deg);
+  top: -21.8%;
+  left: 10%;
+}
+
+.back {
+  width: 8%;
+  height: 13%;
+  left: 31%;
+  top: 22%;
+  border: 0.75vmin solid transparent;
+  border-left: 0.75vmin solid;
+  border-top: 0.3vmin solid transparent;
+}
+
+.back::before {
+  height: 130%;
+  width: 120%;
+  top: 155%;
+  left: -72%;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  box-shadow: 1vmin 0.25vmin 0 -0.5vmin
+}
+
+.back::after {
+  height: 150%;
+  width: 120%;
+  top: 148%;
+  left: -33%;
+  border-radius: 50%;
+  transform: rotate(38deg);
+  box-shadow: 1.5vmin 0 0 -1vmin
+}
+
+.back-1 {
+  width: 11%;
+  height: 22%;
+  transform: rotate(-37deg);
+  border-radius: 60% / 55%;
+  top: 35%;
+  left: 41.75%;
+}
+
+.back-1::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 60% / 55%;
+  top: 0;
+  left: 0;
+  box-shadow: inset 4vmin 1vmin 0 -3.25vmin;
+}
+
+.back-1::after {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset -3.9vmin 0.5vmin 0 -3.25vmin;
+  left: -82.5%;
+  top: 50%;
+  border-radius: 100% ;
+  transform: rotate(5deg);
+  clip-path: polygon(0% 0%, 80% 30%, 90% 0%, 100% 0%, 100% 100%, 0% 100%)
+}
+
+.front {
+  width: 22%;
+  height: 10.5%;
+  border-radius: 85% / 100% 50% 50% 90%;
+  transform: rotate(-34deg);
+  top: 37%;
+  left: 46%;
+  border: 0.75vmin solid transparent;
+  border-left: 0.75vmin solid;
+  border-bottom: 0.25vmin solid transparent;
+  border-top: 1vmin solid;
+  box-shadow: inset 0.25vmin 0 0 -0.25vmin;;
+}
+
+.front::after {
+  width: 50%;
+  height: 80%;
+  border-radius: 50%;
+  border: 0.125vmin solid transparent;
+  border-left: 0.25vmin solid transparent;
+  border-top:0.5vmin solid;
+  transform: rotate(65deg);
+  top: 99.5%;
+  left: -10.5%;
+}
+
+.tail {
+  width: 27%;
+  height: 15%;
+  transform: rotate(-27deg);
+  top: 70.25%;
+  left: 28%;
+  box-shadow: 0 1vmin 0 -0.4vmin;
+}
+
+.tail::before {
+  width: 50%;
+  height: 40%;
+  border-radius: 50%;
+  box-shadow: 0.25vmin 0.75vmin 0 -0.25vmin;
+  transform: rotate(40deg);
+  top: 68%;
+  left: -1.5%;
+}
+
+.tail::after {
+  width: 120%;
+  height: 100%;
+  border: 0.125vmin solid transparent;
+  border-bottom: 0.75vmin solid;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  top: 43%;
+  left: -20%;
+}
+
+.tail-1 {
+  width: 15%;
+  height: 4%;
+  border-radius: 40% / 100%;
+  top: 92%;
+  left: 32.25%;
+  transform: rotate(-17deg);
+  box-shadow: -1vmin 1vmin 0 -0.5vmin, -1vmin 0.33vmin 0 -0.1vmin, -1vmin 0.5vmin 0 -0.1vmin;
+}
+.tail-1::before {
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  top: calc(100% + 0.5vmin);
+  left: 15%;
+  border-radius: 0 100% 100% 0;
+  box-shadow: 0.5vmin -0.66vmin;
+}
+
+.tail-1::after {
+  width: 100%;
+  height: 100%;
+  border: 0.5vmin solid transparent;
+  border-top: 0.5vmin solid;
+  border-left: 0.5vmin solid;
+  border-radius: 80% 0 0 0;
+  left: 115%;
+  top: 35%;
+  transform: rotate(-10deg) skewX(-10deg)
+}
+
+.tail-2 {
+  width: 28%;
+  height: 20%;
+  border-radius: 15% 50% 40% 0;
+  transform: rotate(32deg);
+  top: 58.5%;
+  left: 44.75%;
+  box-shadow: 1vmin -1vmin 0 -0.5vmin
+}
+
+.tail-2::before {
+  width: 90%;
+  height: 100%;
+  border-radius: 0 90% 0 0;
+  top: -0.5vmin;
+  left: 7%;
+  box-shadow: inset -0.125vmin 0.75vmin;
+}
+
+.tail-2::after {
+  width: 65%;
+  height: 150%;
+  border-radius: 10% 100% 30% 0 / 60%;
+  box-shadow: 1vmin -1vmin 0 -0.5vmin, 0.25vmin -1.5vmin 0 -0.5vmin;
+  transform-origin: top left;
+  top: 0.5vmin;
+  transform: rotate(-2deg);
+}
+
+.tail-3 {
+  width: 28%;
+  height: 20%;
+  border-radius: 15% 63% 40% 0;
+  transform: rotate(32deg);
+  top: 58.33%;
+  left: 44.75%;
+  border-left: 1vmin solid transparent;
+  border-top: 0.5vmin solid;
+  border-right: 0.125vmin solid transparent;
+}
+
+.tail-3::after {
+  width: 3.5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  top: -165%;
+  left: 47.5%;
+  transform: rotate(-55deg);
+  box-shadow: 0.5vmin -0.5vmin;
+}
+
+.side-4 {
+  width: 14%;
+  height: 10.75%;
+  border-radius: 0 0 80% 0;
+  border-right: 0.33vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-left: 0 solid transparent;
+  clip-path: polygon(1% -100%, 100% -100%, 100% 100%, 1% 100%);
+  top: 39%;
+  left: 70%;
+  transform: rotate(39deg);
+}
+
+.side-4::before {
+  width: 87%;
+  height: 175%;
+  border-radius: 0 120% 200% 0;
+  border: 0.5vmin solid;
+  border-top: 0.125vmin solid transparent;
+  border-bottom: 0.75vmin solid;
+  bottom: -0.4vmin;
+  border-left: 0 solid transparent;
+}
+
+.side-4::after {
+  width:90%;
+  height: 163%;
+  border-radius: 50%;
+  bottom: -5%;
+  left: -20%;
+  transform: rotate(9deg);
+  box-shadow: inset -0.8vmin -0.5vmin 0 -0.25vmin, inset -0.5vmin 0
+}
+
+.side-5 {
+  width: 33%;
+  height: 27%;
+  transform: rotate(50deg);
+  top: 22.25%;
+  left: 55.5%;
+  box-shadow:inset -0.9vmin -1vmin 0 -0.5vmin;
+}
+
+.side-5::before {
+  width: 40%;
+  height: 20%;
+  border-radius: 50%;
+  left: 21%;
+  top: 69%;
+  transform: rotate(-25deg);
+  border: 0.5vmin solid transparent;
+  border-top: 0.5vmin solid;
+}
+
+.side-5::after {
+  width: 30%;
+  height: 20%;
+  border-radius: 50%;
+  left: 43%;
+  top: 45%;
+  transform: rotate(-30deg);
+  border: 0.5vmin solid transparent;
+  border-bottom: 0.5vmin solid;
+  border-right: 0.125vmin solid transparent;
+}
+
+.side-6 {
+  width: 8%;
+  height: 14%;
+  transform: rotate(-34deg);
+  border-radius: 100% 40% 10% 0;
+  top: 36.5%;
+  left: 54.75%;
+  overflow: hidden;
+  box-shadow: inset -1vmin 0.8vmin 0 -0.25vmin;
+}
+
+.side-6::after {
+  width: 85%;
+  height: 95%;
+  left: 73%;
+  top: -4%;
+  border-radius: 100%;
+  transform: rotate(1deg);
+  box-shadow: inset 0 0 0 4in;
+}
+
+.side-7 {
+  width: 12%;
+  height: 5%;
+  border: 0.125vmin solid transparent;
+  border-top: 0.5vmin solid;
+  top: 37%;
+  left: 56%;
+  transform: rotate(23deg);
+}
+
+.side-7::after {
+  width: 80%;
+  height: 80%;
+  border: 0.125vmin solid transparent;
+  border-top: 0.5vmin solid;
+  border-radius: 100%;
+  transform-origin: top left;
+  transform: rotate(5deg);
+}

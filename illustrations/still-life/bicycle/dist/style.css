@@ -1,0 +1,115 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --dark: #222;
+  --medium: #ccc;
+  --light: white;
+}
+
+.wheels {
+  width: 40%;
+  height: 40%;
+  top: 38.25%;
+  left: 0.25%;
+  border-radius: 50%;
+  background: var(--medium);
+  background: conic-gradient(from 30deg, var(--light), var(--dark));
+}
+
+.wheels::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: 152%;
+  background: var(--medium);
+  background: conic-gradient(from -30deg, var(--light), var(--dark))
+}
+
+.chain {
+  width: 10.5%;
+  height: 10.5%;
+  top: 53%;
+  left: 45.5%;
+  background: var(--medium);
+  background: conic-gradient(from -30deg, var(--light), var(--dark));
+}
+
+.frame {
+  height: 26%;
+  width: 30.5%;
+  bottom: 41.75%;
+  left: 20.25%;
+  transform-origin: bottom left;
+  transform: skewX(-30deg);
+  box-shadow: inset -11vmin 0 8vmin -10vmin var(--dark);
+}
+
+.frame::after {
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  box-shadow: inset -11vmin 0 8vmin -10vmin var(--dark);
+}
+
+.frame-large {
+  height: 29.5%;
+  width: 30.5%;
+  bottom: 41.75%;
+  left: 50.75%;
+  transform-origin: bottom left;
+  transform: skewX(30deg);
+  box-shadow: inset -11vmin 0 8vmin -10vmin var(--dark);
+}
+
+.frame-large::after {
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  box-shadow: inset -11vmin 0 8vmin -10vmin var(--dark);
+}
+
+.handlebar {
+  bottom: 71.25%;
+  left: 50%;
+  width: 20%;
+  height: 2%;
+  border-radius: 5vmin;
+  box-shadow: inset -5vmin 0 8.5vmin -10vmin var(--dark);
+}
+
+.handlebar::after {
+  width: 100%;
+  height: 100%;
+  left: -155%;
+  border-radius: 5vmin;
+  box-shadow: inset -8.5vmin 0 8.5vmin -10vmin var(--dark);
+}

@@ -1,0 +1,417 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+/*
+This cartoon can be customized by changing the colors
+on the CSS variables below. To see a demo, uncomment
+the animation on line 42, or directly change the values
+on the rule below.
+*/
+.cartoon {
+  --skin: #fca;
+  --skindark: #fb8;
+  --hair: #d84;
+  --eye: #69c;
+  width: 80vmin;
+  height: 80vmin;
+/*    animation: cartoonAnimation 15s infinite;  */
+}
+
+@keyframes cartoonAnimation {
+  0% {
+    --skin: #fca;
+    --skindark: #fb8;
+    --hair: #d84;
+    --eye: #69c;
+  }
+  20% {
+    --skin: #963; #fca;
+    --skindark: #851; #fb8;
+    --hair:  #321; #d84;
+    --eye: #321; #69c;
+  }
+  40% {
+    --skin: #69c;
+    --skindark: #58a;
+    --hair:  #e94;
+    --eye: #fd6;
+  }
+  60% {
+    --skin: #ecc;
+    --skindark: #eba;
+    --hair: #96d;
+    --eye: #549;
+  }
+  80% {
+    --skin: #fed;
+    --skindark: #edb;
+    --hair: #433;
+    --eye: #963;
+  }
+}
+
+.face {
+  background: var(--skin);
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 47%;
+  height: 65%;
+  border-radius: 90% 90% 100% 100% / 80% 80% 120% 120%;
+  box-shadow: 0.5vmin 0, -0.5vmin 0, 0 0.25vmin, 0 -0.25vmin;
+}
+
+.eye {
+  width: 25%;
+  height: 25%;
+  background: white;
+  top: 37%;
+  left: 16%;
+  border-radius: 100% 60% 20% 20% / 100% 100% 60% 70%;
+  box-shadow: -0.1vmin -0.5vmin;
+  overflow: hidden;
+  transform: rotate(-4deg);
+}
+
+.eye + .eye {
+  left: auto;
+  right: 16%;
+  box-shadow: 0.1vmin -0.5vmin;
+  border-radius: 60% 100% 20% 20% / 100% 100% 70% 60%;
+  transform: rotate(4deg);
+}
+
+.eye::after {
+  width: 100%;
+  height: 10%;
+  background: var(--skin);
+  border-radius: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 70%);
+  box-shadow: inset 0 0.2vmin black;
+}
+
+.pupil {
+  width: 70%;
+  height: 70%;
+  background: #000;
+  box-shadow: inset 0 0 1vmin #0004, inset 0 0 0 1.75vmin var(--eye);
+  bottom: -7%;
+  right: 7%;
+}
+
+.eye + .eye .pupil {
+  right: auto;
+  left: 7%;
+}
+
+.pupil::before {
+  width: 1vmin;
+  height: 1vmin;
+  background: white;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  box-shadow: 0.75vmin 1vmin 0 0.3vmin white;
+}
+
+.nose {
+  width: 7%;
+  height: 6%;
+  top: 67%;
+  left: 50%;
+  border-radius: 90% 80% 100%;
+  box-shadow:  0.5vmin -0.5vmin;
+  transform: translate(-50%, 0);
+}
+
+.mouth {
+  width: 40%;
+  height: 5%;
+  border-radius: 40%;
+  box-shadow: 0 0.25vmin;
+  transform: translate(-50%, -50%) rotate(5deg);
+  top: 79%;
+  left: 50%;
+  clip-path: polygon(1% 50%, 99% 50%, 100% 120%, 0% 120%);
+}
+
+.cheek {
+  width: 70%;
+  height: 18%;
+  border-radius: 25%;
+  top: 61%;
+  left: 15%;
+  background: radial-gradient(at 50% 0, #ff00001d, var(--skin) 80%);
+}
+
+.ear {
+  width: 15%;
+  height: 24%;
+  border-radius: 100% 90% 100% 100% / 60% 100% 100% 100%;
+  background: var(--skin);
+  box-shadow: -0.1vmin -0.6vmin, -0.25vmin 0, -0.25vmin 0.35vmin;
+  top: 39%;
+  left: 21%;
+  transform: rotate(-24deg);
+}
+
+.ear::before {
+  width: 80%;
+  height: 80%;
+  border-radius: 50% 100% 80% 100%;
+  background: var(--skindark);
+  background: linear-gradient(var(--skindark), var(--skin));
+  top: 13%;
+  right: 5%;
+  box-shadow: inset 0vmin 0.4vmin;
+}
+
+.ear::after {
+  width: 30%;
+  height: 20%;
+  border-radius: 60% / 100%;
+  box-shadow: -0.125vmin -0vmin 0 0.25vmin;
+  top: 50%;
+  right: 40%;
+  background: var(--skindark);
+}
+
+.ear + .ear {
+  left: auto;
+  right: 22%;
+  background: var(--skindark);
+  transform: rotate(24deg);
+  box-shadow: 0.1vmin -0.6vmin, 0.25vmin 0, 0.25vmin 0.35vmin;
+}
+
+.ear + .ear::after {
+  left: auto;
+  right: 25%;
+  transform: rotate(24deg);
+  box-shadow: 0.1vmin -0.25vmin, -0.25vmin 0, 0.25vmin 0.35vmin;
+}
+
+.hair-corrector {
+  top: -3%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,0,0,0.3);
+  clip-path: polygon(49.5% 25.5%, 54% 17%, 70% 17%, 86% 40%, 85.25% 13.5%, 65% 6%, 47% 7%, 30% 5%, 25% 18%, 37% 13%, 46% 20%);
+  background: var(--hair);
+}
+
+
+.hair {
+  border-radius: 100% 90% 100% 60% / 100% 90%;
+  width: 24%;
+  height: 43%;
+  top: 17%;
+  left: 47%;
+  transform: rotate(-10deg);
+  box-shadow: 0.35vmin -0.35vmin, 3.75vmin -3.75vmin 0 1vmin var(--hair), 3.75vmin -3.75vmin 0 1.25vmin;
+}
+
+.hair-0 {
+  left: 46.85%;
+  top: 15.75%;
+  width: 30%;
+  transform: scale(1.4) rotate(9deg) skew(10deg);
+  box-shadow: 0.35vmin -0.35vmin, 4.25vmin -4.25vmin 0 1vmin var(--hair), 4.25vmin -4.25vmin 0 1.25vmin;
+  clip-path: polygon(30% 50%, 30% 0%, 150% 0%, 150% 100%, 30% 100%);
+}
+
+.hair-3 {
+  left: 48%;
+  top: 19%;
+  transform: scale(1.3) rotate(-2deg) skewY(9deg);
+  aclip-path: polygon(0% 0%, 50% 0%, 50% 43%, 140% 40%, 100% 100%, 50% 100%)
+}
+
+.hair-2 {
+  width: 24%;
+  height: 33%;
+  left: 30%;
+  top: 14.25%;
+  transform: scale(0.8) rotate(20deg) skew(10deg) rotateY(180deg);
+}
+
+.hair-4 {
+  width: 30%;
+  top: 13.25%;
+  left: 25.5%;
+  transform: scale(0.9) rotate(30deg) skew(10deg) rotateY(180deg);
+  box-shadow: 0.5vmin -0.25vmin, 8.75vmin -3vmin 0 1vmin var(--hair), 8.75vmin -3vmin 0 1.33vmin;
+}
+
+.hair-top {
+  width: 47.95%;
+  height: 55%;
+  top: -3.5%;
+  left: 41%;
+  transform: rotate(-24deg);
+  background: var(--hair);
+  box-shadow: 0.33vmin -0vmin, 0.25vmin -0.5vmin;
+  clip-path: polygon(35% 0%, 20% 15%, 30% 20%, 100% 62%, 120% -10%);
+  border-radius: 100% 90% 100% 100%;
+}
+
+.hair-top-2 {
+  left: 15%;
+  height: 50%;
+  width: 41%;
+  top: 0%;
+  clip-path: none;
+  transform: none;
+  border-radius: 100% 95% 0% 100%;
+  box-shadow: -0.5vmin -0.25vmin, 0.25vmin -0.25vmin;
+}
+
+.neck {
+  width: 16%;
+  height: 20%;
+  left: 50%;
+  top: 67%;
+  border-radius: 600% 600% 0 0 / 100% 100%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+  box-shadow: inset 0 8.75vmin var(--skindark);
+}
+
+.neck::before,
+.neck::after {
+  border-radius: 50%;
+  width: 10%;
+  height: 100%;
+  top: 0%;
+  box-shadow: 0.33vmin -0.25vmin, 0.75vmin 4vmin 0 -0.25vmin var(--skin); 
+  left: -10%;
+}
+
+.neck::after {
+  box-shadow: -0.33vmin -0.5vmin, -0.75vmin 4vmin 0 -0.5vmin var(--skin); 
+  left: 100%;
+}
+
+.eyebrow {
+  width: 18%;
+  height: 10%;
+  top: 30%;
+  left: 29%;
+  border-radius: 100% 100%;
+  box-shadow: 0.5vmin -1vmin 0 -0.5vmin;
+  transform: rotate(-23deg);
+}
+
+.eyebrow + .eyebrow {
+  top: 29.75%;
+  height: 9%;
+  left: 53%;
+  transform:  rotateY(180deg) rotate(-18deg);
+}
+
+.body, .shoulder {
+  width: 75%;
+  height: 20%;
+  background: var(--skin);
+  background: radial-gradient(at top center, var(--skin) 50%, transparent);
+  background: linear-gradient(to bottom, var(--skin) 30%, transparent 100%);
+  top: 85.25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 -0.4vmin;
+  clip-path: polygon(0% 18%, 100% 18%, 100% 45%, 0% 45%);
+  clip-path: polygon(0% 0%, 50% 70%, 100% 0%, 100% 45%, 0% 45%);
+  clip-path: polygon(0% 0%, 34% 45%, 66% 45%, 100% 0%, 100% 45%, 0% 45%);
+}
+
+.shoulder {
+  clip-path: none;
+  box-shadow: none;
+  clip-path: polygon(0% -50%, 100% -50%, 100% 45%, 0% 45%);
+}
+
+.shoulder::before,
+.shoulder::after {
+  width: 40%;
+  height: 10%;
+  top: -8.5%;
+  left: 10%;
+  border-radius: 0 0 100% 100%;
+  transform: rotate(-14deg);
+  box-shadow: 0.5vmin 0.4vmin, 2vmin 2vmin var(--skin);
+}
+
+.shoulder::after {
+  left: auto;
+  right: 10%;
+  transform: rotate(14deg);
+  box-shadow: -0.5vmin 0.4vmin, -2vmin 2vmin var(--skin);
+}
+
+.messy {
+  top: -1.2%;
+  left: 18%;
+  width: 30%;
+  height: 20%;
+  border-radius: 100%;
+  transform: rotate(-3deg);
+  box-shadow: 0.125vmin -0.25vmin, 0.75vmin -0.5vmin 0 0.5vmin var(--hair), 0.75vmin -0.5vmin 0 0.75vmin;
+  clip-path: polygon(0% -50%, 100% -50%, 100% 30%, 0% 30%);
+}
+
+.hair-line {
+  top: 7.25%;
+  left: 9%;
+  width: 30%;
+  height: 15%;
+  box-shadow: 0.125vmin -0.25vmin;
+  clip-path: polygon(0% 0%, 150% 0%, 150% 30%, 0% 10%);
+  filter: drop-shadow(-3vmin 0vmin)
+}
+
+.hair-line-2 {
+  transform: rotateY(180deg);
+  top: 8%;
+  left: 56%;
+}
+
+.hair-drop {
+  width: 30%;
+  height: 10%;
+  top: 10%;
+  left: 17%;
+  transform: rotate(6deg);
+  box-shadow: 0 -3vmin 0 1vmin rgba(0,0,0,0.2), 0 -3vmin 0 1vmin var(--hair);
+}
+
+.hair-drop + .hair-drop {
+  left: 50.25%;
+  transform: rotate(-6deg);
+}
