@@ -1,0 +1,340 @@
+.cartoon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html, body {
+  background: #f003;
+  overflow: hidden;
+}
+
+.cartoon {
+  --skin: #f44;
+  --teeth: #ee7;
+  --width: 20%;
+}
+.head {
+  width: var(--width);
+  height: 30%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+  border-radius: 10vmin 10vmin 0 0;
+  border-bottom: 0;
+}
+
+.head::before,
+.head::after {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  background: var(--skin);
+  border-radius: 50%;
+  left: 11%;
+  top: 2.5%;
+}
+
+.head::before {
+  left: auto;
+  right: 11.5%;
+}
+
+.jaw {
+  width: 17%;
+  height: 20%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 100% / 3vmin;
+  background: var(--skin);
+}
+
+.mouth {
+  width: 11.25%;
+  height: 11.25%;
+  border-top: 0.5vmin solid;
+  top: 56.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.mouth::after,
+.mouth::before {
+  width: 20%;
+  height: 20%;
+  border: 0.5vmin solid;
+  transform: translate(10%, -60%) rotate(45deg);
+  background: var(--teeth);
+}
+
+.mouth::after {
+  right: 0;
+  transform: translate(-10%, -60%) rotate(45deg);
+}
+
+.cheeks {
+  width: calc(var(--width) * 0.25);
+  height: 8%;
+  border-radius: 0 5vmin 1vmin 0;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  top: 49.5%;
+  left: 50%;
+  transform: translate(-200%, 0);
+}
+
+.cheeks + .cheeks {
+  transform: scaleX(-1) translate(-100%, 0);
+  left: 50%;
+}
+
+.chin {
+  width: 11%;
+  height: 4%;
+  border-top-color: transparent;
+  border-radius: 0 0 100% 100%;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+}
+
+.horns {
+  width: 21%;
+  height: 22%;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  border-top-color: transparent;
+  box-shadow: inset 0 -3vmin var(--skin);
+}
+
+.horns::after {
+  width: 85%;
+  height: 100%;
+  border: 0.5vmin solid;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -15%;
+  border-radius: 50%;
+  box-shadow: 3vmin 0 0 40vmin var(--skin);
+}
+
+.ear {
+  height: 30%;
+  width: 10%;
+  border-radius:  0% 100% 0% 70%;
+  top: 25%;
+  transform: rotate(-8deg);
+  left: 33%;
+  background: var(--skin)
+}
+
+.ear::after {
+  width: 0;
+  height: 80%;
+  border-right: 0.5vmin solid;
+  top: 20%;
+  left: 60%;
+  transform: rotate(-15deg);
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-8deg);
+  left: auto;
+  right: 33%;
+}
+
+.nose {
+  width: 0.5vmin;
+  height: 50%;
+  top: 57%;
+  left: 50%;
+  background: black;
+  transform: translate(-50%, 0);
+}
+
+.nose::after {
+  width: 3vmin;
+  height: 3vmin;
+  border-bottom: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+  transform: rotate(45deg);
+  bottom: 0;
+  left: 0.25vmin;
+  transform: translate(-50%, -10%) rotate(45deg);
+}
+
+.eye {
+  width: 50%;
+  width: calc(50% + 0.5vmin);
+  height: 20%;
+  border-top: 0.5vmin solid;
+  left: -0.5vmin;
+  top: 57%;
+  overflow: hidden;
+  transform-origin: top right;
+  transform: rotate(6deg);
+}
+
+.eye + .eye {
+  transform-origin: top right;
+  transform: scaleX(-1) rotate(6deg);
+}
+
+.eye::before {
+  width: 120%;
+  height: 70%;
+  border: 0.5vmin solid;
+  transform-origin: top right;
+  transform: rotate(17deg);
+  top: -0.5vmin;
+  left: -20%;
+  background: var(--teeth);
+}
+
+.neck {
+  width: 14%;
+  height: 20%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+  border-left: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+}
+
+.chest {
+  width: 50%;
+  height: 60%;
+  left: 50%;
+  top: 72%;
+  transform: translate(-50%, 0);
+  border-radius: 100% / 60% 60% 120% 120%;
+  background: var(--skin);
+}
+
+.chest::after {
+  width: 28%;
+  width: calc(28% - 1vmin);
+  height: 10%;
+  background: var(--skin);
+  left: 50%;
+  top: -5%;
+  transform: translate(-50%, 0);
+}
+
+.chest::before {
+  width: 0.5vmin;
+  height: 30%;
+  top: 25%;
+  left: 50%;
+  background: black;
+}
+
+.shoulder {
+  width: 17%;
+  height: 15%;
+  top: 78%;
+  left: 16%;
+  border-bottom: 0.5vmin solid transparent;
+  border-right: 0.5vmin solid transparent;
+  background: var(--skin);
+  transform: rotate(-4deg);
+}
+
+.shoulder + .shoulder {
+  left: auto;
+  right: 16.25%;
+  border-right: 0.5vmin solid;
+  border-bottom: 0.5vmin solid transparent;
+  border-left: 0.5vmin solid transparent;
+  transform: rotate(5deg);
+}
+
+.arm {
+  width: 17%;
+  height: 25%;
+  top: 88%;
+  left: 13%;
+  background: var(--skin);
+}
+
+.arm + .arm {
+  left: auto;
+  right: 12%;
+  transform: rotate(-15deg)
+}
+
+.tail-top {
+  width: 12%;
+  height: 20%;
+  transform: rotate(15deg);
+  top: 30%;
+  left: 5%;
+}
+
+.tail-top::before {
+  width: 50%;
+  height: 100%;
+  border: 0.5vmin solid;
+  border-radius: 100% 0 0 0;
+  border-right: 0;
+  border-right-color: transparent;
+  transform: skewY(-30deg);
+  transform-origin: top right;
+  background: var(--skin);
+}
+
+.tail-top::after {
+  width: 50%;
+  height: 100%;
+  right: 2%;
+  border: 0.5vmin solid;
+  border-radius: 0 100% 0 0;
+  border-left: 0;
+  border-left-color: transparent;
+  transform: skewY(35deg);
+  transform-origin: top left;
+  background: var(--skin);
+}
+
+.tail {
+  width: 50%;
+  height: 100%;
+  border: 1.5vmin solid var(--skin);
+  transform: rotate(5deg);
+  top: 25%;
+  left: 2%;
+  box-shadow: inset 0.5vmin 0, -0.25vmin 4vmin var(--skin), -0.25vmin 4vmin 0 0.5vmin, -0.5vmin 0;
+  clip-path: polygon(-10% 25%, 100% 28%, 100% 100%, -10% 100%)
+}

@@ -1,0 +1,150 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 60vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+html, body {
+  --dark: #346;
+  --light: #6ce;
+  --white: #def;
+  background: var(--light);
+  overflow: hidden;
+}
+
+.body {
+  width: 80%;
+  height: 40%;
+  top: 10%;
+  left: 0;
+  border-radius: 0 10% 50% 0 / 100%;
+  box-shadow: 4.6vmin 6vmin 0 4vmin var(--dark), 4vmin 13vmin 0 9.5vmin var(--dark);
+  clip-path: polygon(50% -200%, 200% -200%, 200% 200%, 50% 200%)
+}
+
+.body::before,
+.body::after {
+  width: 16vmin;
+  height: 10vmin;
+  background: var(--dark);
+  border-radius:  0 14vmin 0 14vmin;
+  top: -3vmin;
+  right: -2.5vmin;
+  transform: rotate(-10deg);
+}
+
+.body::before {
+  border-radius:  14vmin 0 14vmin 0;
+  right: -17vmin;
+  top: -5.5vmin;
+}
+
+.mouth {
+  width: 92.5%;
+  height: 46%;
+  border-radius: 20vmin 0 100vmin 100vmin;
+  top: 50%;
+  left: 0;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.mouth::before {
+  width: 75%;
+  height: 200%;
+  background: var(--white);
+  border-radius: 0 40% 50% 0;
+  top: 20%;
+  left: -30%;
+  border: 0.5vmin solid var(--light);
+  box-sizing: border-box;
+}
+.mouth::after {
+  width: 80%;
+  left: 10%;
+  height: 30%;
+  border-radius: 100%;
+  top: 55%;
+  box-shadow: 0 0.5vmin var(--light), 0 10vmin 0 7vmin var(--white);
+  clip-path: polygon(42% 0%, 100% 0%, 100% 500%, 42% 500%);
+}
+
+.fin {
+  width: 15%;
+  height: 40%;
+  background: var(--dark);
+  border-radius: 0 100%;
+  top: 78%;
+  left: 42.75%;
+  clip-path: polygon(0% 10%, 100% 10%, 100% 100%, 0% 100%);
+  box-shadow: inset 0.25vmin 0 var(--light);
+  background: linear-gradient(80deg, var(--light) 5%, var(--dark) 0);
+  box-sizing: border-box;
+  transform: rotate(-12deg);
+}
+
+.fin-back {
+  transform: rotate(-30deg);
+  left: 45%;
+}
+
+.eye {
+  aborder-color: transparent;
+  aborder-top-color: var(--white);
+  aborder-right-color: var(--white);
+  border-width: 0.5vmin;
+  width: 3%;
+  height: 3%;
+  top: 63%;
+  left: 33%;
+  background: var(--white);
+  color: var(--white);
+}
+
+.mouth-lines {
+  width: 80.5%;
+  height: 85%;
+  border-radius: 37% 37% 37% 55%;
+  left: -40%;
+  top: 59.5%;
+  overflow: hidden;
+}
+
+.mouth-lines::before,
+.mouth-lines::after {
+  width: 100%;
+  height:100%;
+  border: 0.5vmin solid var(--light);
+  border-radius: 50%;
+  top: -65.75%;
+  left: 55%;
+}
+.mouth-lines::after {
+  border: 0.4vmin solid var(--light);
+  top: -72%;
+  left: 62%;
+}

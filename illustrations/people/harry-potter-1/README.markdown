@@ -6,6 +6,6 @@ Harry Potter cartoon drawn with HTML and CSS. It was done from scratch and it do
 
 ---
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/alvaromontoro/full/YzqyJJL](https://codepen.io/alvaromontoro/pen/YzqyJJL).
+A Pen created on CodePen.io. Original URL: [https://codepen.io/alvaromontoro/full/YzqyJJL](https://codepen.io/alvaromontoro/full/YzqyJJL).
 
 See more CSS drawings on this collection: [https://codepen.io/collection/AOaOdx](https://codepen.io/collection/AOaOdx)

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body {
+  background: #6f4e37; #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.coffee {
+  position: relative;
+  width: 75vmin;
+  height: 40vmin;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bebas Neue', sans-serif;
+  amix-blend-mode: multiply
+}
+
+.coffee::before {
+  content: "";
+  position: absolute;
+  width: 57vmin;
+  height: 3vmin;
+  border-radius: 100%;
+  background: #6f4e37;
+  left: 56%;
+  top: 5.5%;
+  transform: translate(-50%, -50%);
+}
+
+.coffee::after {
+  content: "";
+  height: 9%;
+  width: 74%;
+  position: absolute;
+  bottom: 0;
+  right: 6%;
+  background: white;
+  border-radius: 0 0 5vmin 5vmin;
+}
+
+.coffee span {
+  position: absolute;
+  line-height: 0;
+  mix-blend-mode: soft-light;
+}
+
+.coffee span:nth-child(1) {
+  top: 46%;
+  left: 0.25vmin;
+  font-size: 25vmin;
+}
+
+.coffee span:nth-child(2) {
+  top: 50%;
+  left: 8.25vmin;
+  font-size: 49vmin;
+}
+
+.coffee span:nth-child(3) {
+  top: 50%;
+  left: 25vmin;
+  font-size: 50vmin;
+}
+
+.coffee span:nth-child(4) {
+  top: 73%;
+  left: 35vmin;
+  font-size: 20vmin;
+}
+
+.coffee span:nth-child(5) {
+  top: 50%;
+  left: 40.25vmin;
+  font-size: 50vmin;
+}
+
+.coffee span:nth-child(6) {
+  top: 50%;
+  left: 56.75vmin;
+  font-size: 50vmin;
+  transform: scaleX(-1);
+}

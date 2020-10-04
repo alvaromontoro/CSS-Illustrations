@@ -4,7 +4,7 @@ This is a cartoon done from scratch without a plan on what to do exactly. As the
 
 Credit: the pattern in the t-shirt is a variation of [Lea Verou's Marrakesh CSS pattern](https://leaverou.github.io/css3patterns/#marrakesh).
 
-![Caricature of Ace Ventura](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/people/ace-ventura/ace-ventura.png?raw=true)
+![Caricature of Ace Ventura, a man character with a big smile and a hawaiian shirt](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/people/ace-ventura/ace-ventura.png?raw=true)
 
 ---
 

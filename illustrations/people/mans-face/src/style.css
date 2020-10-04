@@ -1,0 +1,368 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid var(--line);
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --eyes: #132;
+  --line: rgba(80, 0, 0, 0.2);
+  --beard: #ccc;
+  overflow: hidden;
+}
+
+.head {
+  width: 51%;
+  height: 77%;
+  background: var(--skin);
+  background: linear-gradient(var(--skin) 73%, var(--beard) 0 98%, var(--skin) 0);
+  border-radius: 100% / 55% 55% 120% 120%;
+  box-shadow: 0 -0.25vmin var(--line), 0 -0.25vmin var(--skin), 0 0.25vmin var(--line), 0 0.25vmin var(--beard);
+  border: 0.75vmin solid var(--line);
+  top: 1%;
+  left: 24.5%;
+  overflow: hidden;
+}
+
+.chin {
+  width: 20%;
+  height: 5%;
+  background: var(--beard);
+  border: 0.75vmin solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 100% 100%;
+  bottom: 21.75%;
+  left: 40%;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin);
+  background-position: 0 50%;
+  background-size: 20% 50%;
+}
+
+.hair {
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 20%, 0% 50%);
+  background-image:
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin);
+    background-size: 15% 13%, 10% 10%, 20% 20%, 30% 30%, 40% 40%, 50% 50%;
+    background-position: 15% 13%, 10% 10%, 20% 20%, 30% 30%, 40% 40%, 50% 50%;
+}
+
+.beard {
+  width: 100%;
+  height: 60%;
+  bottom: -25%;
+  left: 0%;
+  background: var(--beard);
+  border-radius: 100%;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.1) 0.125vmin, transparent 0.25vmin);
+    background-size: 15% 13%, 10% 10%, 20% 20%, 30% 30%, 40% 40%, 50% 50%;
+    background-position: 15% 13%, 10% 10%, 20% 20%, 30% 30%, 40% 40%, 50% 50%;
+}
+
+.nose {
+  width: 8vmin;
+  height: 8vmin;
+  background: var(--skin);
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, 15%) rotate(-45deg);
+  border-top-width: 0.4vmin;
+  border-right-width: 0.4vmin;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.nostril {
+  width: 5vmin;
+  height: 5vmin;
+  left: 39%;
+  top: 59%;
+  border-width: 0.7vmin;
+  border-top-width: 0.15vmin;
+  border-right-width: 0.15vmin;
+  transform: translate(-50%, 15%) rotate(-10deg);
+}
+
+.nostril + .nostril {
+  left: auto;
+  right: 39%;
+  transform: translate(50%, 15%) rotate(-80deg);
+}
+
+.mouth {
+  width: 40%;
+  left: 30%;
+  top: 77%;
+  border-top: 1vmin solid var(--line);
+  border-radius: 50%;
+  height: 5%;
+  transform: rotate(5deg);
+}
+
+.ear {
+  width: 15%;
+  height: 30%;
+  border-radius: 100% 100% 90% 120% / 50% 100% 40% 90%;
+  background: var(--skin);
+  transform: rotate(-15deg);
+  top: 31%;
+  left: 16%;
+  border-top-width: 0.5vmin;
+  border-bottom-width: 0.5vmin;
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-15deg);
+  left: auto;
+  right: 16%;
+}
+
+.ear::before {
+  width: 60%;
+  height: 50%;
+  border: 0.75vmin solid var(--line);
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+}
+
+.ear::after {
+  width: 5vmin;
+  height: 5vmin;
+  border: 0.75vmin solid var(--line);
+  background: var(--skin);
+  border-radius: 50%;
+  top: 55%;
+  left: 35%;
+  border-bottom-width: 0.25vmin;
+}
+
+.neck {
+  width: 28%;
+  height: 30%;
+  background: var(--skin);
+  top: 58%;
+  left: 36%;
+  border-width: 0.6vmin;
+  border-left-width: 0.75vmin;
+  border-bottom: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+}
+
+.adams-apple {
+  width: 6vmin;
+  height: 5vmin;
+  border: 0.75vmin solid var(--line);
+  top: 73%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%) rotate(-45deg);
+  border-left: 0;
+  border-top: 0;
+  border-right-width: 0.4vmin;
+}
+
+.body {
+  width: 80%;
+  left: 10%;
+  height: 30%;
+  top: 83%;
+  background: var(--skin);
+  border-radius: 100% / 100%;
+  border-bottom: 0;
+  border-left-width: 0.25vmin;
+   border-right-width: 0.25vmin;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 10% 60%, 3% 4%);
+}
+
+.shoulder {
+  width: 28%;
+  height: 20%;
+  background: var(--skin);
+  border-right: 0;
+  border-top-width: 0.5vmin;
+  border-bottom: 0;
+  bottom: -10%;
+  left: -2%;
+  transform: rotate(-20deg);
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.shoulder + .shoulder {
+  transform: scaleX(-1) rotate(-20deg);
+  left: auto;
+  right: -1.5%;
+}
+
+.chest {
+  width: 10%;
+  height: 4.5%;
+  border-bottom: 0.75vmin solid var(--line);
+  border-radius: 50%;
+  border-left: 0.5vmin solid transparent;
+  top: 94%;
+  left: 50.5%;
+  transform: translate(-50%, 0);
+}
+
+.eyebrow {
+  width: 36%;
+  height: 7%;
+  background: red;
+  top: 29%;
+  border-radius: 100% 150% 70% 100% / 120% 200% 20% 50%;
+  background: #555;
+  right: 3%;
+  box-shadow: 0 -0.05vmin 0 0.125vmin var(--skin), 0.4vmin 0 var(--line), 0.4vmin 0 #555;
+  transform: rotate(-1deg);
+}
+
+.eyebrow + .eyebrow {
+  left: 3%;
+  width: 37%;
+  top: 28.5%;
+  transform: scaleX(-1) rotate(-2deg);
+}
+
+.eyebrow::after {
+  width: 120%;
+  height: 35%;
+  background: var(--skin);
+  border-radius: 50%;
+  bottom: -55%;
+  left: -15%;
+}
+
+.eyebrow::before {
+  width: 5%;
+  height: 100%;
+  background: #555;
+  border-radius: 50%;
+  left: -10%;
+  box-shadow: inset 0 0 0 0.5vmin var(--line);
+}
+
+.eye {
+  width: 30%;
+  height: 10%;
+  background: white;
+  border-right-width: 0.5vmin;
+  border-left-width: 0.5vmin;
+  border-bottom-width: 0.6vmin;
+  top: 35%;
+  left: 63%;
+  border-radius: 120% 120% 90% 100% / 120% 200% 30% 50%;
+  border-radius: 100% 120% 90%  100% /   80% 90% 200% 120%;
+  overflow: hidden;
+}
+
+.eye + .eye {
+  top: 34.5%;
+  left: 7%;
+  transform: scaleX(-1);
+}
+
+/* option 1 */
+.eye {
+  height: 7%;
+  top: 37.5%;
+  background: var(--skin);
+  border: 0;
+  background: white;
+  box-shadow: 0 -0.75vmin var(--line);
+  box-shadow: 0 -0.75vmin var(--line), 0 -3vmin 0 0.8vmin rgba(80,0,0,0.05);
+  border-radius: 100% 120% 30%  50% /   80% 90% 200% 120%;
+}
+
+.eye + .eye {
+  top: 37%;
+  left: 8%;
+}
+/* end option 1 */
+
+/* option 2 */
+/* .eye {
+  border: 0;
+  height: 6.5%;
+  top: 36.25%;
+  box-shadow: 0 -0.125vmin 0 0.75vmin var(--line);
+}
+
+.eye + .eye {
+  top: 36%;
+} */
+/* end option 2 */ 
+
+
+.iris {
+  width: 5vmin;
+  height: 5vmin;
+  background: red;
+  left: 28%;
+  top: -10%;
+  background: #321;
+  box-shadow: inset 0 0 1vmin 1vmin var(--line), inset 0 0 0 1.5vmin #642;
+}
+
+.light {
+  width: 0.5vmin;
+  height: 0.5vmin;
+  border-radius: 50%;
+  background: white;
+  top: 25%;
+  left: 35%;
+}
+
+.eye + .eye .light {
+  left: 45%;
+}
+
+.nose-line {
+  width: 8%;
+  height:4%;
+  top: 50%;
+  left: 50%;
+  border-top: 0.66vmin solid var(--line);
+  transform: translate(-40%, 0);
+}
