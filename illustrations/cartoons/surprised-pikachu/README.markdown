@@ -4,7 +4,7 @@ A version of the popular Surprised Pikachu meme done with HTML and CSS.
 
 The quotes change every 7 seconds, and some of them should probably be Unsettled Tom instead... -5 points for the wrong meme usage!
 
-![Cartoon depicting Pikachu, an animal-looking character with big ears, cheeks, and nose](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/cartoons/suprised-pikachu/surprised-pikachu.png?raw=true)
+![Cartoon depicting Pikachu, an animal-looking character with big ears, cheeks, and nose](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/cartoons/surprised-pikachu/surprised-pikachu.png?raw=true)
 
 ---
 
