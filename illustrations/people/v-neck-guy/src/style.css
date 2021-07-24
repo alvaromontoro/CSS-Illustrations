@@ -1,0 +1,337 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html, body {
+  overflow: hidden;  
+}
+
+.cartoon {
+  --skin: #fca;
+  --hair: #631;
+  --shirt: #eee;
+}
+
+.head {
+  width: 30%;
+  height: 40%;
+  border-radius: 100% / 40%;
+  overflow: hidden;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.head::after,
+.head::before {
+  width: 15%;
+  height: 80%;
+  top: 10%;
+  left: -12%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 15vmin var(--skin);
+}
+
+.head::after {
+  left: auto;
+  right: -12%;
+}
+
+.chin {
+  width: 10%;
+  height: 5%;
+  background: var(--skin);
+  border-radius: 40%;
+  top: 46.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 -1.67vmin 0 -1.5vmin rgba(128,0,0,0.025), inset 0 1vmin 2vmin -2vmin rgba(128,0,0,0.1);
+}
+
+.ear {
+  width: 10%;
+  height: 17%;
+  background: var(--skin);
+  border-radius: 100% / 60% 60% 110% 110%;
+  top: 22%;
+  left: 30%;
+  transform: rotate(-3deg);
+  background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
+}
+
+.ear::after {
+  width: 80%;
+  height: 70%;
+  border-radius: 50%;
+  background: red;
+  right: 0;
+  top:15%;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.1))
+}
+
+.ear::before {
+  width:4vmin;
+  height: 4vmin;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  top: 45%;
+  left: 40%;
+}
+
+.ear + .ear {
+  left: auto;
+  right: 30%;
+  transform: rotate(5deg);
+  background-image: linear-gradient(to left, transparent, rgba(0,0,0,0.1));
+}
+
+.ear + .ear::after {
+  left: 0;
+  background: linear-gradient(to left, transparent, rgba(0,0,0,0.1));
+}
+
+.ear + .ear::before {
+  left: auto;
+  right: 40%;
+}
+
+.neck {
+  width: 15%;
+  height: 15%;
+  background: var(--skin);
+  border-radius: 0 0 100% 100% / 40%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(rgba(0,0,0,0.1), transparent 80%);
+}
+
+.eye {
+  top: 38%;
+  left: 18%;
+  width: 25%;
+  height: 22%;
+  background: white;
+  z-index: 1;
+  border-radius: 120% 90% 30% 50% / 90%;
+  overflow: hidden;
+  box-shadow: 0 -2vmin rgba(80,0,0,0.025);
+}
+
+.eye + .eye {
+  left: 57%;
+  border-radius: 90% 120% 45% 30% / 90%;
+}
+
+.eye::before {
+  width: 2vmin;
+  height: 2vmin;
+  background: white;
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0.5vmin -0.5vmin 0 0.75vmin black, 0 0 0 0.5vmin #963;
+}
+
+.eye::after {
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 0 4vmin rgba(0,0,0,0.1), 0 0 0 4vmin var(--skin);
+}
+
+.mouth {
+  width: 40%;
+  height: 15%;
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 10vmin / 50%;
+  box-shadow: inset 0 3.15vmin var(--skin), inset 0 -2vmin rgba(128,0,0,0.05), 0 0.125vmin rgba(0,0,0,0.1);
+}
+
+.mouth::after {
+  width: 15%;
+  height: 25%;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.nose {
+  width: 18%;
+  height: 36%;
+  background: var(--skin);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  border-radius: 100% / 120% 120% 40% 40%;
+  background-image: linear-gradient(transparent, rgba(128,0,0,0.1));
+}
+
+.nostril {
+  width:25%;
+  height: 6%;
+  background: rgba(128,0,0,0.1);
+  background: linear-gradient(to right,rgba(128,0,0,0.1), transparent, rgba(128,0,0,0.1)), linear-gradient(transparent, rgba(128,0,0,0.05));
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+  border-radius: 5vmin;
+}
+
+.eyebrow {
+  width: 35%;
+  height: 30%;
+  z-index: 1;
+  border-radius: 100% / 60%;
+  top: 32%;
+  left: 12%;
+  box-shadow: 0 -2vmin 0 -0.5vmin var(--hair);
+  transform: rotate(-6deg)
+}
+
+.eyebrow + .eyebrow {
+  left: 53%;
+  transform: rotate(6deg);
+}
+
+.sideburns,
+.hair-back {
+  width: 38%;
+  height: 43%;
+  background: var(--hair);
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 100% / 50% 50% 120% 120%;
+}
+
+.sideburns {
+  top: 5%;
+  width: 32%;
+}
+
+.hair-top {
+  width: 28%;
+  height: 7%;
+  background: var(--hair);
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.hair-locks {
+  width: 8%;
+  height: 8%;
+  background: var(--hair);
+  color: var(--hair);
+  top: 13%;
+  left: 30%;
+  box-shadow: 25vmin 2vmin, 23vmin -5vmin 0 3vmin, 25vmin -1vmin 0 1vmin, 0 -5vmin 0 1vmin, 4vmin -10vmin, 10vmin -9vmin 0 3vmin, 0.5vmin -10vmin 0 -2vmin, 16vmin -12vmin, 19vmin -9vmin 0 2vmin, 23vmin -11vmin 0 -0.5vmin;
+}
+
+.cheeks {
+  width: 70%;
+  height: 10%;
+  z-index: 1;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 0 0 100% 100%;
+  background: linear-gradient(rgba(255,0,0,0.05), transparent);
+  background: radial-gradient(at 50% 0, rgba(255,0,0,0.075), transparent 70%)
+}
+
+.lip {
+  width: 45%;
+  height: 40%;
+  border-radius: 40%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 -8vmin 1vmin -6.8vmin rgba(128, 0,0,0.1)
+}
+
+.shirt {
+  width:55%;
+  height: 65%;
+  background: #f007;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50% 50% / 10% 10% 55% 55%;
+  background: radial-gradient(at 50% -40%, var(--skin) 30%, transparent 0), linear-gradient(var(--shirt) 50%, white 75%);
+}
+
+.arm-shirt-1,
+.arm-shirt-2 {
+  width: 17%;
+  height: 25%;
+  background: var(--shirt);
+  border-radius: 100% 0 0 0;
+  top: 59.75%;
+  left: 9%;
+  transform: rotate(3deg);
+  background-image: linear-gradient(-65deg, rgba(0,0,0,0.05), var(--shirt) 40%)
+}
+
+.arm-shirt-2 {
+  transform: rotate(-3deg);
+  border-radius: 0 110% 0 0;
+  left: 74%;
+  top: 59.5%;
+  background-image: linear-gradient(65deg, rgba(0,0,0,0.05), transparent 30%)
+}
+
+.arm {
+  width: 16%;
+  height: 25%;
+  background: var(--skin);
+  border-radius: 4vmin / 100%;
+  background-image: linear-gradient(transparent 50%, white), linear-gradient(rgba(128,0,0,0.1), transparent 50%), linear-gradient(to right, transparent, rgba(128,0,0,0.1));
+  top: 80%;
+  left: 10%;
+}
+
+.arm + .arm {
+  transform: scaleX(-1) rotate(4deg);
+  left: 75%;
+}

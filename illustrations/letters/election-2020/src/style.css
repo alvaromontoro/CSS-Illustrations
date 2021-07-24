@@ -1,0 +1,159 @@
+#election {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20vmin);
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 8vmin;
+  letter-spacing: 5.45vmin;
+}
+
+#election span {
+  position: absolute;
+  left: -10000in;
+  font-size:  0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.letters {
+  --blue: #68f;
+  --red: #e55;
+  --black: #222;
+  --yellow: gold;
+  --clear: rgba(255,255,200,0.33);
+  width: 80vmin;
+  height: 20vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letters > div {
+  width: 20vmin;
+  height: 20vmin;
+  float: left;
+  position: relative;
+}
+
+.letters > div > div {
+  position: absolute;
+}
+
+.letters > div > div::after,
+.letters > div > div::before {
+  content:"";
+  display: block;
+  position: absolute;
+}
+
+.two {
+  background-image: linear-gradient(var(--black), var(--black));
+  background-size: 6.5vmin 6.5vmin;
+  background-repeat: no-repeat;
+  background-position: 12vmin bottom;
+  overflow: hidden;
+}
+
+.two::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  background: conic-gradient(var(--black) 180deg, transparent 0 270deg, var(--black) 0);
+  box-shadow: 0 12vmin var(--black);
+  border-radius: 50%;
+}
+
+.two::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--black);
+  width: 40%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -12.25%) rotate(40deg);
+}
+
+.zero {
+  border-radius: 50%;
+}
+
+.zero.biden {
+  background: var(--blue);
+  overflow: hidden;
+}
+
+.zero.trump {
+  background: var(--red);
+}
+
+.biden > div {
+  box-sizing: border-box;
+  width: 100%;
+  height: 20%;
+  border: 0.3vmin solid transparent;
+  border-top: 0.35vmin solid var(--yellow);
+  border-radius: 52%;
+  top: 25%;
+  left: 0;
+  box-shadow: inset 0 0.4vmin var(--blue), inset 2vmin 0 var(--blue), inset -2vmin 0 var(--blue), inset 0 0.7vmin var(--yellow);
+}
+
+.biden > div::before,
+.biden > div::after {
+  width: 40%;
+  height: 5vmin;
+  background: black;
+  border-radius:50% 25% 100% 60%;
+  transform: rotate(-5deg);
+  top: 10%;
+  left: 5%;
+  border: 0.25vmin solid var(--yellow);
+}
+
+.biden > div::after {
+  transform: scaleX(-1) rotate(-5deg);
+  left: auto;
+  right: 5%;
+}
+
+.trump > div {
+  width: 100%;
+  height: 25%;
+  top: -4.5%;
+  left: 7.5%;
+  border-radius: 80% 100% 100% 50% / 5vmin;
+  transform: rotate(3deg);
+  box-shadow: inset 4vmin -1.5vmin var(--clear), inset 4vmin -1.5vmin var(--yellow);
+  overflow: hidden;
+}
+
+.trump > div::after {
+  width: 98%;
+  height: 100%;
+  border-radius: 0 100% 0 0;
+  background: var(--yellow);
+  box-shadow: inset 0 0 0 10vmin var(--clear);
+}
+
+.trump::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% / 120% 60% 60% 120%;;
+  width: 15%;
+  height: 30%;
+  top: 10%;
+  background: var(--yellow);
+  transform: rotate(10deg);
+  box-shadow: inset 0 0 0 10vmin var(--clear);
+}
