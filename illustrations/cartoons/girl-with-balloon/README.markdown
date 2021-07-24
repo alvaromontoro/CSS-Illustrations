@@ -2,7 +2,7 @@
 
 Inspired by an illustration by super-talented [Ana María](https://twitter.com/amethyste_ana). As with the previous cartoon, the originals are 1,000 times better than my translation into HTML+CSS.
 
-![Cartoon of a girl with a balloon](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/cartoons/girl-with-balloon/girl-with-balloon.png?raw=true)
+![Cartoon of a girl with a balloon](https://github.com/alvaromontoro/CSS-Illustrations/blob/master/illustrations/cartoons/girl-with-balloon/girl-with-baloon.png?raw=true)
 
 ---
 
